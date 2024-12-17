@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #5a189a;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #7209b7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #5a189a;
+        }
+        .videos {
+            display: none;
+            margin-top: 20px;
+        }
+        iframe {
+            margin-top: 10px;
+            width: 300px;
+            height: 170px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter your Email</h1>
+        <input type="email" id="emailInput" placeholder="Email address" required />
+        <button onclick="submitEmail()">Submit</button>
+        <div class="videos">
+            <h2>Videos</h2>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        function submitEmail() {
+            const emailInput = document.getElementById("emailInput").value;
+
+            if (!emailInput) {
+                alert("Please enter a valid email.");
+                return;
+            }
+
+            // Send email to server-side PHP script
+            fetch("save_email.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: `email=${encodeURIComponent(emailInput)}`,
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        document.querySelector(".videos").style.display = "block";
+                        alert("Email saved successfully!");
+                    } else {
+                        alert("Failed to save email. Please try again.");
+                    }
+                })
+                .catch((error) => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
