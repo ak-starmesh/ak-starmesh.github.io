@@ -4,24 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starmesh AI</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden; /* Prevents scrolling anytime a user scrolls */
-            background-color: #000; /* Fallback background color */
-        }
-        img {
-            width: 100vw; /* Full viewport width */
-            height: auto; /* Maintain aspect ratio */
-            max-height: 100vh; /* Limit height to viewport */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this file is created in the correct directory -->
 </head>
 <body>
-    <img src="images/starmesh_landing.jpg" alt="Starmesh AI">
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="images/starmesh-logo3.png" alt="Starmesh Logo" />
+            </a>
+            <button class="request-access">Request Access</button> <!-- Request access button on top right -->
+        </nav>
+    </header>
+    <div class="hero-section">
+        <h1>Extract Zoom Data to BigQuery & Snowflake in Minutes</h1>
+        <p>Simplify AI/ML workflows with structured Zoom data for analytics.</p>
+        <button>Request Early Access</button>
+    </div>
+    <div class="how-it-works">
+        <h2>How It Works</h2>
+        <p>Explain the tool's simplicity. Use icons or visuals to keep it digestible.</p>
+        <p>Connect: Authenticate Zoom and your data warehouse (BigQuery/Snowflake).</p>
+        <p>Extract & Transform: We pull meetings, transcripts, and recordings into a clean, structured format.</p>
+        <p>Analyze: Use the data for AI/ML models, sentiment analysis, and insights.</p>
+    </div>
+    <div class="key-features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Automated Data Extraction: Pull Zoom data seamlessly.</li>
+            <li>Warehouse Integration: Native support for BigQuery and Snowflake.</li>
+            <li>Clean & Structured: Ready for AI/ML workflows.</li>
+            <li>Flexible Scheduling: One-time or automated extractions.</li>
+            <li>Scalable: Handle data from multiple accounts.</li>
+        </ul>
+    </div>
+    <div class="testimonials">
+        <h2>Testimonials</h2>
+        <p>"Early adopters are seeing Zoom data structured for analytics faster than ever."</p>
+        <p>Alternatively, include trust-building signals:</p>
+        <p>"Built for Data Engineers & AI Teams"</p>
+        <p>Icons: BigQuery, Snowflake, and Zoom logos.</p>
+    </div>
 </body>
 </html>

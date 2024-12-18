@@ -1,0 +1,122 @@
+body {
+    font-family: 'Lato', sans-serif; /* Updated to Lato font */
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px; /* Adjusted letter spacing for better readability */
+    background-color: #2B2D3E; /* Darker purple hue background */
+}
+
+.navbar {
+    height: 60px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and button */
+    padding: 10px; /* Padding for spacing */
+    background-color: #2B2D3E; /* Background color for the navbar */
+}
+
+.logo img {
+    max-height: 50px; /* Ensure the logo does not exceed this height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.hero-section {
+    background-color: #2B2D3E; /* Darker purple hue background */
+    padding: 120px; /* Adjusted padding for better spacing */
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3em; /* Modern and stylish font size */
+    color: #E4D6F5; /* Contrasting font color */
+    font-weight: 500; /* Using Medium 500 for the main text elements */
+    letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
+}
+
+.hero-section p {
+    font-size: 1.5em; /* Modern and stylish font size */
+    color: #B3acf2; /* Contrasting font color */
+    font-weight: 400; /* Using Regular 400 for the main text elements */
+    letter-spacing: 1px; /* Adjusted letter spacing for better readability */
+}
+
+/* Button styling as per instructions */
+button {
+    height: 2.5em; /* 2.5x the height */
+    background-color: #4B4E5E; /* Lighter shade for contrast with the background */
+    border-radius: 10px; /* Rounded corners */
+    color: #E4D6F5; /* Contrasting font color */
+    font-size: 1.5em; /* Modern and stylish font size */
+    font-weight: 500; /* Using Medium 500 for the main text elements */
+    letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #5B5E6E; /* Hover over color */
+}
+
+.how-it-works {
+    background-color: #2B2D3E; /* Darker purple hue background */
+    padding: 120px; /* Adjusted padding for better spacing */
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5em; /* Modern and stylish font size */
+    color: #E4D6F5; /* Contrasting font color */
+    font-weight: 500; /* Using Medium 500 for the main text elements */
+    letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
+}
+
+.how-it-works p {
+    font-size: 1.5em; /* Modern and stylish font size */
+    color: #B3acf2; /* Contrasting font color */
+    font-weight: 400; /* Using Regular 400 for the main text elements */
+    letter-spacing: 1px; /* Adjusted letter spacing for better readability */
+}
+
+.key-features {
+    background-color: #2B2D3E; /* Darker purple hue background */
+    padding: 120px; /* Adjusted padding for better spacing */
+    text-align: center;
+}
+
+.key-features h2 {
+    font-size: 2.5em; /* Modern and stylish font size */
+    color: #E4D6F5; /* Contrasting font color */
+    font-weight: 500; /* Using Medium 500 for the main text elements */
+    letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
+}
+
+.key-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.key-features li {
+    font-size: 1.5em; /* Modern and stylish font size */
+    color: #B3acf2; /* Contrasting font color */
+    font-weight: 400; /* Using Regular 400 for the main text elements */
+    letter-spacing: 1px; /* Adjusted letter spacing for better readability */
+}
+
+.testimonials {
+    background-color: #2B2D3E; /* Darker purple hue background */
+    padding: 120px; /* Adjusted padding for better spacing */
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5em; /* Modern and stylish font size */
+    color: #E4D6F5; /* Contrasting font color */
+    font-weight: 500; /* Using Medium 500 for the main text elements */
+    letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
+}
+
+.testimonials p {
+    font-size: 1.5em; /* Modern and stylish font size */
+    color: #B3acf2; /* Contrasting font color */
+    font-weight: 400; /* Using Regular 400 for the main text elements */
+    letter-spacing: 1px; /* Adjusted letter spacing for better readability */
+}
