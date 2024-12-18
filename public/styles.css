@@ -13,6 +13,7 @@ body {
     justify-content: space-between; /* Space between logo and button */
     padding: 10px; /* Padding for spacing */
     background-color: #2B2D3E; /* Background color for the navbar */
+    position: relative; /* Position relative for absolute positioning of stars */
 }
 
 .logo img {
@@ -21,9 +22,64 @@ body {
 }
 
 .hero-section {
-    background-color: #2B2D3E; /* Darker purple hue background */
+    position: relative; /* Position relative for absolute positioning of stars */
     padding: 120px; /* Adjusted padding for better spacing */
     text-align: center;
+    color: #E4D6F5; /* Ensure text is readable against the background */
+    overflow: hidden; /* Hide overflow for stars */
+    background-color: #2B2D3E; /* Fallback background color */
+}
+
+.stars-container {
+    position: absolute; /* Position stars container absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Ensure stars are behind other content */
+}
+
+.star {
+    position: absolute;
+    background-color: white; /* Star color */
+    clip-path: polygon(50% 0%, 61% 30%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 30%); /* Star shape */
+    animation: twinkle 1.5s infinite alternate, move 5s infinite alternate; /* Twinkling and moving effect */
+    animation-duration: 1.5s, 5s; /* Duration of twinkling and moving */
+    z-index: 0; /* Ensure stars are behind other content */
+}
+
+/* Twinkling effect */
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/* Movement effect */
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(5px, 5px); /* Move slightly */
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Ensure content has a higher z-index */
+.hero-section h1, 
+.hero-section p, 
+.hero-section button {
+    position: relative; /* Position content relative to the hero section */
+    z-index: 1; /* Ensure content is above the stars */
 }
 
 .hero-section h1 {
@@ -50,6 +106,7 @@ button {
     font-weight: 500; /* Using Medium 500 for the main text elements */
     letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    z-index: 1;
 }
 
 button:hover {
