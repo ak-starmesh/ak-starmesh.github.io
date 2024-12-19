@@ -32,3 +32,32 @@ createStars(navbarStarsContainer, 100); // Adjust the number of stars for the na
 // Create stars for the hero section
 const heroStarsContainer = document.querySelector('.hero-section .stars-container');
 createStars(heroStarsContainer, 150); // Adjust the number of stars for the hero section
+
+const dynamicText = document.querySelector('.dynamic-text');
+const names = ['Databricks', 'Snowflake', 'BigQuery'];
+let index = 0;
+
+function cycleNames() {
+    // Add slide-out class to initiate the slide out effect
+    dynamicText.classList.add('slide-out');
+
+    // Wait for the slide-out animation to finish before changing the text
+    setTimeout(() => {
+        index = (index + 1) % names.length; // Cycle through the names
+        dynamicText.textContent = names[index];
+
+        // Remove slide-out class and add slide-in class to initiate the slide in effect
+        dynamicText.classList.remove('slide-out');
+        dynamicText.classList.add('slide-in');
+    }, 500); // Match this timeout with the CSS transition duration
+
+    // Remove slide-in class after the animation is done
+    setTimeout(() => {
+        dynamicText.classList.remove('slide-in');
+    }, 1000); // Duration of the slide-in effect
+}
+
+// Initial call to set the first name
+cycleNames();
+// Change the name every 2 seconds (2000 milliseconds)
+setInterval(cycleNames, 2000);

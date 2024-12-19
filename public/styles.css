@@ -87,6 +87,13 @@ body {
     color: #E4D6F5; /* Contrasting font color */
     font-weight: 500; /* Using Medium 500 for the main text elements */
     letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text within the flex container */
+    width: 100%; /* Ensure the h1 takes the full width */
+    margin: 0; /* Remove default margin */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
 .hero-section p {
@@ -98,11 +105,12 @@ body {
 
 /* Button styling as per instructions */
 button {
-    height: 2.5em; /* 2.5x the height */
+    height: 2em; /* Reduced height */
     background-color: #4B4E5E; /* Lighter shade for contrast with the background */
-    border-radius: 10px; /* Rounded corners */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Reduced border radius */
     color: #E4D6F5; /* Contrasting font color */
-    font-size: 1.5em; /* Modern and stylish font size */
+    font-size: 1.2em; /* Reduced font size for the button text */
     font-weight: 500; /* Using Medium 500 for the main text elements */
     letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
@@ -176,4 +184,44 @@ button:hover {
     color: #B3acf2; /* Contrasting font color */
     font-weight: 400; /* Using Regular 400 for the main text elements */
     letter-spacing: 1px; /* Adjusted letter spacing for better readability */
+}
+
+.dynamic-text {
+    display: inline-block; /* Allows for sliding effect */
+    width: 250px; /* Fixed width to prevent shifting */
+    overflow: hidden; /* Hide overflow for sliding effect */
+    position: relative; /* Position relative for absolute positioning of sliding */
+    margin-left: 10px; /* Optional: Add some space between the fixed text and dynamic text */
+    text-align: left; /* Left justify the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.slide-out {
+    animation: slideOut 0.5s forwards; /* Slide out upwards */
+}
+
+.slide-in {
+    animation: slideIn 0.5s forwards; /* Slide in from below */
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0); /* Start at original position */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateY(-100%); /* Move upwards */
+        opacity: 0; /* Fade out */
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%); /* Start from below */
+        opacity: 0; /* Fully transparent */
+    }
+    100% {
+        transform: translateY(0); /* Move to original position */
+        opacity: 1; /* Fully visible */
+    }
 }
