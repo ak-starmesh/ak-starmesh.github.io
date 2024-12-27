@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starmesh AI</title>
     <link rel="stylesheet" href="styles.css"> <!-- Ensure this file is created in the correct directory -->
-</head>
-<body>
+    <link rel="icon" href="images/starmesh-logo-purple.png" type="image/x-icon"> <!-- Link to the favicon -->
+  </head>
+  <body>
     <header>
         <nav class="navbar">
             <div class="stars-container"></div> <!-- Stars container in the navbar -->
             <a href="#" class="logo">
                 <img src="images/starmesh-logo.png" alt="Starmesh" />
             </a>
-            <button class="request-access">Request Access</button> <!-- Updated button text -->
         </nav>
     </header>
     <div class="hero-section">
@@ -24,28 +24,23 @@
     </div>
     <div class="how-it-works">
         <h2>How It Works</h2>
-        <p>Explain the tool's simplicity. Use icons or visuals to keep it digestible.</p>
-        <p>Connect: Authenticate Zoom and your data warehouse (BigQuery/Snowflake).</p>
-        <p>Extract & Transform: We pull meetings, transcripts, and recordings into a clean, structured format.</p>
-        <p>Analyze: Use the data for AI/ML models, sentiment analysis, and insights.</p>
-    </div>
-    <div class="key-features">
-        <h2>Key Features</h2>
-        <ul>
-            <li>Automated Data Extraction: Pull Zoom data seamlessly.</li>
-            <li>Warehouse Integration: Native support for BigQuery and Snowflake.</li>
-            <li>Clean & Structured: Ready for AI/ML workflows.</li>
-            <li>Flexible Scheduling: One-time or automated extractions.</li>
-            <li>Scalable: Handle data from multiple accounts.</li>
-        </ul>
-    </div>
-    <div class="testimonials">
-        <h2>Testimonials</h2>
-        <p>"Early adopters are seeing Zoom data structured for analytics faster than ever."</p>
-        <p>Alternatively, include trust-building signals:</p>
-        <p>"Built for Data Engineers & AI Teams"</p>
-        <p>Icons: BigQuery, Snowflake, and Zoom logos.</p>
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('databricks')">Databricks</button>
+            <button class="tab-button" onclick="showTab('snowflake')">Snowflake</button>
+            <button class="tab-button" onclick="showTab('bigquery')">BigQuery</button>
+        </div>
+        <div class="tab-content">
+            <div id="databricks" class="tab active">
+                <img src="images/z2db.svg" alt="How it works with Databricks" />
+            </div>
+            <div id="snowflake" class="tab">
+                <img src="images/z2bq.svg" alt="How it works with Snowflake" />
+            </div>
+            <div id="bigquery" class="tab">
+                <img src="images/z2bq.svg" alt="How it works with BigQuery" />
+            </div>
+        </div>
     </div>
     <script src="script.js"></script> <!-- Link to the external JavaScript file -->
-</body>
+  </body>
 </html>

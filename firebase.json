@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "starmesh-site",
     "public": "public",
     "ignore": [
       "firebase.json",

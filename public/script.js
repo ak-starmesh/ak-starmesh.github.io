@@ -61,3 +61,53 @@ function cycleNames() {
 cycleNames();
 // Change the name every 2 seconds (2000 milliseconds)
 setInterval(cycleNames, 2000);
+
+function showTab(tabId) {
+    // Hide all tabs
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+        tab.style.display = 'none'; // Hide all tabs explicitly
+    });
+
+    // Remove active class from all tab buttons
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    // Show the selected tab
+    const activeTab = document.getElementById(tabId);
+    if (activeTab) {
+        activeTab.classList.add('active');
+        activeTab.style.display = 'block'; // Show the active tab
+    }
+
+    // Set the clicked button as active
+    const activeButton = Array.from(tabButtons).find(button => button.textContent.toLowerCase() === tabId);
+    if (activeButton) {
+        activeButton.classList.add('active');
+    }
+
+    // Explicitly display the tab content container
+    const tabContentContainer = document.querySelector('.tab-content');
+    if (tabContentContainer) {
+        tabContentContainer.style.display = 'block'; // Ensure the tab content is displayed
+    }
+}
+
+// Show the default tab on page load
+showTab('databricks');
+
+function adjustTabContentHeight() {
+    const tabContent = document.querySelector('.tab-content');
+    if (tabContent) {
+        tabContent.style.height = `${window.innerHeight * 0.5}px`; // Set height to 50% of the viewport height
+    }
+}
+
+// Call the function on window resize
+window.addEventListener('resize', adjustTabContentHeight);
+
+// Call the function on initial load
+adjustTabContentHeight();

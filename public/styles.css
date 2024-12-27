@@ -27,7 +27,7 @@ body {
     text-align: center;
     color: #E4D6F5; /* Ensure text is readable against the background */
     overflow: hidden; /* Hide overflow for stars */
-    background-color: #2B2D3E; /* Fallback background color */
+    background-color: #2B2D3E; /* Replace with the desired dark color */
 }
 
 .stars-container {
@@ -104,27 +104,26 @@ body {
 }
 
 /* Button styling as per instructions */
-button {
-    height: 2em; /* Reduced height */
-    background-color: #4B4E5E; /* Lighter shade for contrast with the background */
-    border: none; /* Remove the button border */
-    border-radius: 5px; /* Reduced border radius */
-    color: #E4D6F5; /* Contrasting font color */
-    font-size: 1.2em; /* Reduced font size for the button text */
-    font-weight: 500; /* Using Medium 500 for the main text elements */
-    letter-spacing: 1.5px; /* Adjusted letter spacing for better readability */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    z-index: 1;
+button, .request-access-button {
+    background-color: #6A5ACD; /* Purple background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 30px; /* Increase padding for a bigger button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
 }
 
-button:hover {
-    background-color: #5B5E6E; /* Hover over color */
+button:hover, .request-access-button:hover {
+    background-color: #5B4DA1; /* Darker purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .how-it-works {
-    background-color: #2B2D3E; /* Darker purple hue background */
-    padding: 120px; /* Adjusted padding for better spacing */
-    text-align: center;
+    padding: 40px; /* Padding for the section */
+    text-align: center; /* Center text */
+    z-index: 1;
 }
 
 .how-it-works h2 {
@@ -224,4 +223,57 @@ button:hover {
         transform: translateY(0); /* Move to original position */
         opacity: 1; /* Fully visible */
     }
+}
+
+.tabs {
+    display: flex; /* Align tabs horizontally */
+    justify-content: center; /* Center align the tab buttons */
+    margin-bottom: 20px; /* Space between tabs and content */
+}
+
+.tab-button {
+    color: #B3B3B3; /* Less visible color for inactive buttons */
+    font-weight: normal; /* Normal weight for inactive buttons */
+    background-color: transparent; /* Keep background transparent */
+    padding: 10px 15px; /* Add padding for better click area */
+    border: none; /* Remove the border */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    height: 100%; /* Ensure the button takes full height */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.tab-button.active {
+    color: #E4D6F5; /* More visible color for active button */
+}
+
+.tab-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    border: none; /* Ensure no border on hover */
+}
+
+.tab-content {
+    display: none; /* Hide all tab content by default */
+    padding: 20px; /* Padding around the content */
+    border-radius: 5px; /* Optional: Rounded corners for the content area */
+    width: 100%; /* Ensure it takes full width */
+    max-width: 100vw; /* Prevent overflow beyond the viewport */
+    overflow: hidden; /* Hide overflow */
+    height: 50vh; /* Set height to 50% of the viewport height */
+    transition: height 0.3s ease; /* Smooth transition for height changes */
+}
+
+.tab {
+    display: flex; /* Hide all tabs by default */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure it takes the full height of the tab-content */
+}
+
+.tab img {
+    max-width: 90%; /* Ensure the image fits within the tab */
+    max-height: 90%; /* Ensure the image does not exceed the height */
+    filter: invert(1); /* Invert the colors of the SVG */
 }
